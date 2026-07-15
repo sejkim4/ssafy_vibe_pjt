@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Literal, List, Optional
+from datetime import datetime
 from app.schemas.location import LocationResponse
 
 
@@ -52,4 +53,6 @@ class GameResultResponse(BaseModel):
 
 class MatchResultResponse(BaseModel):
     match_id: int
-    winner: LocationResponse
+    winner_location: LocationResponse
+    finished_at: datetime
+

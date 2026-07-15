@@ -181,7 +181,8 @@ def get_final_result(match_id: int, db: Session = Depends(get_db)) -> MatchResul
         res = match_service.get_match_result(db, match_id)
         return MatchResultResponse(
             match_id=res["match_id"],
-            winner=LocationResponse.model_validate(res["winner"]),
+            winner_location=LocationResponse.model_validate(res["winner"]),
+            finished_at=res["finished_at"],
         )
     except MatchNotFoundError:
         raise HTTPException(

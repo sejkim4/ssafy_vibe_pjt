@@ -305,5 +305,6 @@ def get_match_result(db: Session, match_id: int) -> Dict[str, Any]:
 
     return {
         "match_id": match.id,
-        "winner": winner
+        "winner": winner,
+        "finished_at": match.finished_at
     }
