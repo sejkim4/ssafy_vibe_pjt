@@ -237,7 +237,7 @@ def test_full_match_playthrough(db, client):
     assert response.status_code == 200
     result_data = response.json()
     assert result_data["match_id"] == match_id
-    assert result_data["winner"]["id"] == game0.location_a_id
+    assert result_data["winner_location"]["id"] == game0.location_a_id
 
 
 def test_full_match_playthrough_8_rounds(db, client):
