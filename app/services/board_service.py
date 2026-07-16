@@ -38,7 +38,7 @@ def get_board_rankings(
         SUM(CASE WHEN is_final AND winner_id = location_id THEN 1 ELSE 0 END) AS championships
       FROM game_sides
       GROUP BY location_id
-      HAVING total_games >= 5
+      HAVING total_games >= 1
     )
     SELECT
       l.id AS location_id,
