@@ -13,12 +13,12 @@ from app.scripts.init_db import init_db
 logger = logging.getLogger(__name__)
 
 CATEGORY_FILES = [
-    ("서울_관광지.json", "12", "tourist_spot", 783),
-    ("서울_문화시설.json", "14", "culture_facility", 566),
-    ("서울_축제공연행사.json", "15", "festival", 201),
-    ("서울_레포츠.json", "28", "leports", 126),
-    ("서울_숙박.json", "32", "accommodation", 423),
-    ("서울_쇼핑.json", "38", "shopping", 4368),
+    ("seoul_tourist_spot.json", "12", "tourist_spot", 783),
+    ("seoul_culture_facility.json", "14", "culture_facility", 566),
+    ("seoul_festival.json", "15", "festival", 201),
+    ("seoul_leports.json", "28", "leports", 126),
+    ("seoul_accommodation.json", "32", "accommodation", 423),
+    ("seoul_shopping.json", "38", "shopping", 4368),
 ]
 
 DISTRICT_CODES = {

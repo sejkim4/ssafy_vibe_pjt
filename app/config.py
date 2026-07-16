@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     database_url: str = "sqlite:///./app.db"
-    seoul_data_dir: str = "../pm/서울"
+    seoul_data_dir: str = "seoul"
     openai_api_key: str = ""
     openai_model: str = "gpt-4o-mini"
     kakao_map_api_key: str = ""
