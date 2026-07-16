@@ -1,7 +1,16 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.routers import locations, matches, reviews, board, chat
 
 app = FastAPI(title="Seoul Vibe Backend")
+
+# TODO: 프로덕션 배포 전 allow_origins를 실제 프론트엔드 도메인으로 좁힐 것 (API명세서 §9)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(locations.router, prefix="/api")
 app.include_router(matches.router, prefix="/api")
